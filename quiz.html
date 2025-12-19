@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Amor</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="header-actions">
+            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            <button id="restart-quiz" class="btn-reset"><i class="fa-solid fa-rotate-right"></i> Reiniciar</button>
+        </div>
+
+        <header class="quiz-header">
+            <h1>Quiz do <span class="gold-text">Amor</span></h1>
+            <p>Teste seu conhecimento sobre nós</p>
+        </header>
+
+        <div class="quiz-status">
+            <span id="question-number">Pergunta 1 de 5</span>
+            <span class="score-badge"><i class="fa-solid fa-heart"></i> <span id="score">0</span></span>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <div id="quiz-container">
+            <div class="question-card">
+                <h2 id="question-text">Carregando pergunta...</h2>
+            </div>
+
+            <div id="options-container" class="options-grid">
+                </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Início</span>
+        </a>
+        <a href="memoria.html" class="nav-item">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>Memória</span>
+        </a>
+        <a href="quiz.html" class="nav-item active">
+            <div class="icon-circle"><i class="fa-solid fa-circle-question"></i></div>
+            <span>Quiz</span>
+        </a>
+        <a href="pintura.html" class="nav-item">
+            <i class="fa-solid fa-palette"></i>
+            <span>Pintura</span>
+        </a>
+        <a href="musicas.html" class="nav-item">
+            <i class="fa-solid fa-music"></i>
+            <span>Músicas</span>
+        </a>
+    </nav>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

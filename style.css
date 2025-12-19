@@ -1,0 +1,258 @@
+:root {
+    --purple-main: #4a2b6d;
+    --purple-light: #e9dcf7;
+    --pink-light: #f7dcf0;
+    --yellow-light: #fdf2d5;
+    --gold: #d4af37;
+    --text-color: #333;
+    --bg-color: #fcfaff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 80px; /* Espaço para a nav fixa */
+}
+
+.container {
+    max-width: 600px; /* Ideal para Mobile e Tablet */
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* --- Cabeçalho --- */
+.hero {
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.special-tag {
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--purple-main);
+    margin: 15px 0;
+}
+
+.highlight {
+    color: #8e6abf;
+}
+
+.hero p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* --- NOVO: O Embrulho que segura tudo --- */
+.frame-wrapper {
+    position: relative; /* Importante: vira a referência para o coração flutuar */
+    width: 250px;      /* A largura total desejada */
+    height: auto;      /* Altura automática */
+    margin: 40px auto; /* Centraliza na tela e dá espaço acima/abaixo */
+    /* Não tem overflow: hidden aqui! */
+}
+
+/* --- A Moldura da Foto (que corta a imagem) --- */
+/* O Wrapper agora tem um tamanho fixo e não deixa nada fugir */
+.photo-wrapper {
+    position: relative;
+    width: 260px;       /* Tamanho ideal para celular igual ao seu print */
+    height: 340px;      /* Altura do card */
+    margin: 40px auto;  /* Centraliza e afasta dos textos */
+    z-index: 5;
+}
+
+/* A moldura branca */
+.photo-frame-final {
+    width: 100%;
+    height: 100%;
+    border: 10px solid white; /* Borda branca grossa */
+    border-radius: 40px;      /* Cantos bem redondos */
+    overflow: hidden;         /* CORTA a foto se ela tentar sair */
+    position: relative;
+    box-shadow: 0 15px 35px rgba(107, 52, 217, 0.2); /* Sombra roxinha */
+}
+
+/* A foto agora obedece! */
+.main-photo-final {
+    width: 100% !important;   /* Força a largura do container */
+    height: 100% !important;  /* Força a altura do container */
+    object-fit: cover;        /* Preenche sem esticar */
+    display: block;
+}
+
+/* Sombra interna para o coração aparecer melhor */
+.inner-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    z-index: 2;
+}
+
+/* Bolinha do coração centralizada na borda de baixo */
+.heart-badge-float {
+    position: absolute;
+    bottom: -20px; /* Joga metade para fora da borda branca */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.heart-badge-float i {
+    color: #ff4757;
+    font-size: 1.4rem;
+}
+
+/* --- Card de Frase --- */
+.quote-card {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 40px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+}
+
+.quote-card p {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--purple-main);
+}
+
+/* --- Grid de Cards --- */
+.explore h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.gold-text { color: var(--gold); }
+
+.grid-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 25px;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none; /* Remove o sublinhado azul de link */
+    color: inherit; /* Mantém a cor do texto definida no card-info */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-3px); /* Efeito de levante ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card.purple { background-color: var(--purple-light); }
+.card.yellow { background-color: var(--yellow-light); }
+.card.pink { background-color: var(--pink-light); }
+.card.purple-light { background-color: #f0e6ff; }
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--purple-main);
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    color: var(--purple-main);
+    margin-bottom: 2px;
+}
+
+.card-info p {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+}
+
+/* --- Navegação Inferior --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 25px; /* Padding extra embaixo para iPhones novos */
+    border-top: 1px solid #eee;
+    z-index: 100;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.nav-item i { font-size: 1.2rem; margin-bottom: 4px; }
+
+.nav-item.active {
+    color: #8e6abf;
+}
+
+.nav-item.active i {
+    background: #f0e6ff;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+
+
+/* Ajuste para Tablets */
+@media (min-width: 768px) {
+    .container { max-width: 700px; }
+    .grid-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

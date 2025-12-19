@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="memoria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-game">
+
+    <main class="container">
+        <div class="header-actions">
+            <a href="index.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Voltar
+            </a>
+            <button id="reset-btn" class="btn-reset">
+                <i class="fa-solid fa-rotate-right"></i> Reiniciar
+            </button>
+        </div>
+
+        <div class="game-title-section">
+            <h1>Jogo da <span class="text-purple-light">Memória</span></h1>
+            <p>Encontre os pares das nossas memórias</p>
+            <div class="badge-moves">
+                Movimentos: <span id="moves">0</span>
+            </div>
+        </div>
+
+        <div class="memory-grid" id="game-board">
+            </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Início</span>
+        </a>
+        <a href="memoria.html" class="nav-item active">
+            <div class="icon-circle">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <span>Memória</span>
+        </a>
+        <a href="quiz.html" class="nav-item">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Quiz</span>
+        </a>
+        <a href="pintura.html" class="nav-item">
+            <i class="fa-solid fa-palette"></i>
+            <span>Pintura</span>
+        </a>
+        <a href="musicas.html" class="nav-item">
+            <i class="fa-solid fa-music"></i>
+            <span>Músicas</span>
+        </a>
+    </nav>
+
+    <script src="memoria.js"></script>
+</body>
+</html>

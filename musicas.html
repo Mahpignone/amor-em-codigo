@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Playlist</title>
+    <link rel="stylesheet" href="musicas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="playlist-header">
+            <div class="top-row">
+                <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                <span class="song-count"><i class="fa-solid fa-music"></i> <span id="total-songs">0</span> músicas</span>
+            </div>
+            <h1>Nossa <span class="gold-text">Playlist</span></h1>
+            <p>As músicas da nossa história</p>
+        </header>
+
+        <div id="songs-container" class="songs-list"></div>
+
+        <p class="spotify-hint">✨ Clique no ícone externo para ouvir no Spotify ✨</p>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Início</span>
+        </a>
+        <a href="memoria.html" class="nav-item">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>Memória</span>
+        </a>
+        <a href="quiz.html" class="nav-item">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Quiz</span>
+        </a>
+        <a href="pintura.html" class="nav-item">
+            <i class="fa-solid fa-palette"></i>
+            <span>Pintura</span>
+        </a>
+        <a href="musicas.html" class="nav-item active">
+            <div class="icon-circle"><i class="fa-solid fa-music"></i></div>
+            <span>Músicas</span>
+        </a>
+    </nav>
+
+    <script src="musicas.js"></script>
+</body>
+</html>
